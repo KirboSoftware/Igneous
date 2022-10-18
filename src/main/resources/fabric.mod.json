@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "igneous",
+  "version": "${version}",
+
+  "name": "Igneous",
+  "description": "A nether expansion mod that aims to get a ton of functionality.",
+  "authors": [
+    "JoostMSoftware"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "LGPLv3",
+  "icon": "assets/igneous/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.joostmsoftware.igneous.Igneous"
+    ]
+  },
+  "mixins": [
+    "igneous.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "fabric-api": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
