@@ -1,9 +1,7 @@
-# Fabric Example Mod
+# Igneous
 
-## Setup
-
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+A fabric nether expansion mod which adds new fauna, mobs and other awesome stuff for adventuring in the nether.
 
 ## License
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+Igneous is under the LGPLv3 License. Please read the license!!

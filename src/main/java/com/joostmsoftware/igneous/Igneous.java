@@ -1,13 +1,10 @@
 package com.joostmsoftware.igneous;
 
 import com.joostmsoftware.igneous.registry.IgneousBiomeRegistry;
-import com.joostmsoftware.igneous.world.gen.biomes.nether.IgneousNetherBiomes;
 import com.joostmsoftware.igneous.world.gen.regions.IgneousNetherRegion;
-import com.joostmsoftware.igneous.world.gen.surface.nether.IgneousNetherSurfaceRuleData;
+import com.joostmsoftware.igneous.world.surface.nether.IgneousNetherSurfaceRuleData;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.biome.v1.NetherBiomes;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.biome.Climate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import terrablender.api.Regions;
