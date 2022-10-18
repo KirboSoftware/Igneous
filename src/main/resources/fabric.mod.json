@@ -20,12 +20,14 @@
   "entrypoints": {
     "main": [
       "com.joostmsoftware.igneous.Igneous"
+    ],
+    "terrablender": [
+      "com.joostmsoftware.igneous.Igneous"
     ]
   },
   "mixins": [
     "igneous.mixins.json"
   ],
-
   "depends": {
     "fabricloader": ">=0.14.9",
     "fabric-api": "*",
