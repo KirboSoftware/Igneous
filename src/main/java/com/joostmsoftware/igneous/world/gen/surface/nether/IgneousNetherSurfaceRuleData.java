@@ -1,6 +1,6 @@
-package com.joostmsoftware.igneous.world.surface.nether;
+package com.joostmsoftware.igneous.world.gen.surface.nether;
 
-import com.joostmsoftware.igneous.world.gen.biomes.nether.IgneousNetherBiomes;
+import com.joostmsoftware.igneous.world.biomes.nether.IgneousNetherBiomes;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.world.gen.YOffset;

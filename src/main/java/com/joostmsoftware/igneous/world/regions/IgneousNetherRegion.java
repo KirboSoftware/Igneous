@@ -1,6 +1,6 @@
-package com.joostmsoftware.igneous.world.gen.regions;
+package com.joostmsoftware.igneous.world.regions;
 
-import com.joostmsoftware.igneous.world.gen.biomes.nether.IgneousNetherBiomes;
+import com.joostmsoftware.igneous.world.biomes.nether.IgneousNetherBiomes;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;

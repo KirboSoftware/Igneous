@@ -1,4 +1,4 @@
-package com.joostmsoftware.igneous.world.gen.biomes.nether;
+package com.joostmsoftware.igneous.world.biomes.nether;
 
 import net.minecraft.client.sound.MusicType;
 import net.minecraft.sound.BiomeAdditionsSound;

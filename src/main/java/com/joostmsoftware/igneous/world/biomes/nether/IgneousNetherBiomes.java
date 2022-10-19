@@ -1,4 +1,4 @@
-package com.joostmsoftware.igneous.world.gen.biomes.nether;
+package com.joostmsoftware.igneous.world.biomes.nether;
 
 import com.joostmsoftware.igneous.Igneous;
 import com.joostmsoftware.igneous.util.registry.IgneousBiomeRegistry;
