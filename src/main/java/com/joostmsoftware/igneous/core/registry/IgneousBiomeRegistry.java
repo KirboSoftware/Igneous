@@ -1,4 +1,4 @@
-package com.joostmsoftware.igneous.registry;
+package com.joostmsoftware.igneous.core.registry;
 
 import com.joostmsoftware.igneous.world.gen.biomes.nether.IgneousNetherBiomes;
 import net.fabricmc.fabric.api.biome.v1.NetherBiomes;

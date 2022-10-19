@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "igneous:still_nether_water",
+    "igneous:flowing_nether_water"
+  ]
+}

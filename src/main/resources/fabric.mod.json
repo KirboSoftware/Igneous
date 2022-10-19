@@ -21,6 +21,9 @@
     "main": [
       "com.joostmsoftware.igneous.Igneous"
     ],
+    "client": [
+      "com.joostmsoftware.igneous.client.IgneousClient"
+    ],
     "terrablender": [
       "com.joostmsoftware.igneous.Igneous"
     ]

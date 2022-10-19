@@ -1,7 +1,7 @@
 package com.joostmsoftware.igneous.world.gen.biomes.nether;
 
 import com.joostmsoftware.igneous.Igneous;
-import com.joostmsoftware.igneous.registry.IgneousBiomeRegistry;
+import com.joostmsoftware.igneous.core.registry.IgneousBiomeRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.biome.Biome;
@@ -17,6 +17,7 @@ public class IgneousNetherBiomes {
     }
 
     public static void loadNetherBiomes() {
+        Igneous.LOGGER.info("Registering Biomes");
         // do first
         IgneousBiomeRegistry.registerBiome(HOT_SPRINGS, HotSpringsBiome.create());
         IgneousBiomeRegistry.registerBiome(LUSH_HOT_SPRINGS, LushedHotSpringsBiome.create());
