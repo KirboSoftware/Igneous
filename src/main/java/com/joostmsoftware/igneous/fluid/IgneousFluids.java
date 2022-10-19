@@ -1,6 +1,6 @@
 package com.joostmsoftware.igneous.fluid;
 
-import com.joostmsoftware.igneous.core.registry.IgneousFluidRegistry;
+import com.joostmsoftware.igneous.util.registry.IgneousFluidRegistry;
 import net.minecraft.fluid.FlowableFluid;
 
 import java.util.HashMap;

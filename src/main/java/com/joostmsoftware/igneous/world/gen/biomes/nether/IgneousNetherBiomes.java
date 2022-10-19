@@ -1,7 +1,7 @@
 package com.joostmsoftware.igneous.world.gen.biomes.nether;
 
 import com.joostmsoftware.igneous.Igneous;
-import com.joostmsoftware.igneous.core.registry.IgneousBiomeRegistry;
+import com.joostmsoftware.igneous.util.registry.IgneousBiomeRegistry;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.Biome;

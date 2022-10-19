@@ -1,7 +1,7 @@
 package com.joostmsoftware.igneous.item;
 
 import com.joostmsoftware.igneous.Igneous;
-import com.joostmsoftware.igneous.core.registry.IgneousItemRegistry;
+import com.joostmsoftware.igneous.util.registry.IgneousItemRegistry;
 
 import static com.joostmsoftware.igneous.block.IgneousBlocks.BLOCKS;
 

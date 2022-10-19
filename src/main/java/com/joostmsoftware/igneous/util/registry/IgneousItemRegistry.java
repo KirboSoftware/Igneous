@@ -1,4 +1,4 @@
-package com.joostmsoftware.igneous.core.registry;
+package com.joostmsoftware.igneous.util.registry;
 
 import com.joostmsoftware.igneous.Igneous;
 import com.joostmsoftware.igneous.item.IgneousBlockItems;

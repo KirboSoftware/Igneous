@@ -1,7 +1,7 @@
 package com.joostmsoftware.igneous.item;
 
 import com.joostmsoftware.igneous.Igneous;
-import com.joostmsoftware.igneous.core.registry.IgneousItemRegistry;
+import com.joostmsoftware.igneous.util.registry.IgneousItemRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.BucketItem;
 import net.minecraft.item.Items;

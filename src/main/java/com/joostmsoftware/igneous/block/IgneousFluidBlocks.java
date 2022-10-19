@@ -1,6 +1,6 @@
 package com.joostmsoftware.igneous.block;
 
-import com.joostmsoftware.igneous.core.registry.IgneousBlockRegistry;
+import com.joostmsoftware.igneous.util.registry.IgneousBlockRegistry;
 import com.joostmsoftware.igneous.fluid.IgneousFluids;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Blocks;

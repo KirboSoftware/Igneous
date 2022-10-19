@@ -1,9 +1,9 @@
 package com.joostmsoftware.igneous;
 
-import com.joostmsoftware.igneous.core.registry.IgneousBiomeRegistry;
-import com.joostmsoftware.igneous.core.registry.IgneousBlockRegistry;
-import com.joostmsoftware.igneous.core.registry.IgneousFluidRegistry;
-import com.joostmsoftware.igneous.core.registry.IgneousItemRegistry;
+import com.joostmsoftware.igneous.util.registry.IgneousBiomeRegistry;
+import com.joostmsoftware.igneous.util.registry.IgneousBlockRegistry;
+import com.joostmsoftware.igneous.util.registry.IgneousFluidRegistry;
+import com.joostmsoftware.igneous.util.registry.IgneousItemRegistry;
 import com.joostmsoftware.igneous.world.gen.regions.IgneousNetherRegion;
 import com.joostmsoftware.igneous.world.surface.nether.IgneousNetherSurfaceRuleData;
 import net.fabricmc.api.ModInitializer;
