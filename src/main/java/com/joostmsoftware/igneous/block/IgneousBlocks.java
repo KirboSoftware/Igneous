@@ -3,8 +3,8 @@ package com.joostmsoftware.igneous.block;
 import com.joostmsoftware.igneous.Igneous;
 import com.joostmsoftware.igneous.core.registry.IgneousBlockRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.block.Block;
+import net.minecraft.block.Material;
 
 import java.util.HashMap;
 import java.util.Map;

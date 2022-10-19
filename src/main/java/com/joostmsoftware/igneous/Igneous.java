@@ -8,10 +8,10 @@ import com.joostmsoftware.igneous.world.gen.regions.IgneousNetherRegion;
 import com.joostmsoftware.igneous.world.surface.nether.IgneousNetherSurfaceRuleData;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import terrablender.api.Regions;
@@ -26,11 +26,11 @@ public class Igneous implements ModInitializer, TerraBlenderApi {
 
 	private static final String MOD_ID = "igneous";
 
-	public static ResourceLocation ID(String path) {
-		return new ResourceLocation(MOD_ID, path);
+	public static Identifier ID(String path) {
+		return new Identifier(MOD_ID, path);
 	}
 
-	public static CreativeModeTab GROUP = FabricItemGroupBuilder.build(ID("group"), ()-> new ItemStack(Items.WARPED_NYLIUM));
+	public static ItemGroup GROUP = FabricItemGroupBuilder.build(ID("group"), ()-> new ItemStack(Items.WARPED_NYLIUM));
 
 	@Override
 	public void onInitialize() {

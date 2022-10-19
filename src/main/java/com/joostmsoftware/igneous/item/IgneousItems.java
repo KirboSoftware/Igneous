@@ -3,7 +3,7 @@ package com.joostmsoftware.igneous.item;
 import com.joostmsoftware.igneous.Igneous;
 import com.joostmsoftware.igneous.core.registry.IgneousItemRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.world.item.Item;
+import net.minecraft.item.Item;
 
 import java.util.HashMap;
 import java.util.Map;

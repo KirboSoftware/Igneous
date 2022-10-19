@@ -2,65 +2,70 @@ package com.joostmsoftware.igneous.fluid;
 
 import com.joostmsoftware.igneous.block.IgneousFluidBlocks;
 import com.joostmsoftware.igneous.item.IgneousBucketItems;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.LiquidBlock;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.material.FlowingFluid;
-import net.minecraft.world.level.material.Fluid;
-import net.minecraft.world.level.material.FluidState;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.fluid.FlowableFluid;
+import net.minecraft.fluid.Fluid;
+import net.minecraft.fluid.FluidState;
+import net.minecraft.item.Item;
+import net.minecraft.state.StateManager;
+import net.minecraft.state.property.Properties;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
+import net.minecraft.world.BlockView;
+import net.minecraft.world.WorldAccess;
+import net.minecraft.world.WorldView;
 
-import java.util.Optional;
+public abstract class NetherWaterFluid extends FlowableFluid {
+@Override
+protected boolean isInfinite() {
+    return false;
+}
 
-public abstract class NetherWaterFluid extends FlowingFluid {
     @Override
-    protected boolean canConvertToSource() {
-        return false;
+    protected void beforeBreakingBlock(WorldAccess world, BlockPos pos, BlockState state) {
+        final BlockEntity blockEntity = state.hasBlockEntity() ? world.getBlockEntity(pos) : null;
+        Block.dropStacks(state, world, pos, blockEntity);
     }
 
     @Override
-    protected void beforeDestroyingBlock(LevelAccessor level, BlockPos pos, BlockState state) {
-        final BlockEntity blockEntity = state.hasBlockEntity() ? level.getBlockEntity(pos) : null;
-        Block.dropResources(state, level, pos, blockEntity);
-    }
-
-    @Override
-    protected int getSlopeFindDistance(LevelReader level) {
+    protected int getFlowSpeed(WorldView world) {
         return 4;
     }
 
     @Override
-    protected int getDropOff(LevelReader level) {
+    protected int getLevelDecreasePerBlock(WorldView world) {
         return 1;
     }
 
+    @Override
+    public boolean matchesType(Fluid fluid) {
+        return fluid == getStill() || fluid == getFlowing();
+    }
 
     @Override
-    public int getTickDelay(LevelReader level) {
+    public int getLevel(FluidState state) {
+        return 0;
+    }
+
+    @Override
+    public int getTickRate(WorldView world) {
         return 5;
     }
 
     @Override
-    protected float getExplosionResistance() {
+    protected float getBlastResistance() {
         return 100f;
     }
 
     @Override
-    protected boolean canBeReplacedWith(FluidState state, BlockGetter level, BlockPos pos, Fluid fluid, Direction direction) {
+    protected boolean canBeReplacedWith(FluidState state, BlockView world, BlockPos pos, Fluid fluid, Direction direction) {
         return false;
     }
 
     @Override
-    public Fluid getSource() {
+    public Fluid getStill() {
         return IgneousFluids.STILL_NETHER_WATER;
     }
 
@@ -70,51 +75,46 @@ public abstract class NetherWaterFluid extends FlowingFluid {
     }
 
     @Override
-    public Item getBucket() {
+    public Item getBucketItem() {
         return IgneousBucketItems.NETHER_WATER_BUCKET;
     }
 
     @Override
-    protected BlockState createLegacyBlock(FluidState state) {
-        return IgneousFluidBlocks.NETHER_WATER_BLOCK.defaultBlockState().setValue(LiquidBlock.LEVEL, getLegacyLevel(state));
+    protected BlockState toBlockState(FluidState state) {
+        return IgneousFluidBlocks.NETHER_WATER_BLOCK.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(state));
     }
 
     @Override
-    public Optional<SoundEvent> getPickupSound() {
-        return Optional.of(SoundEvents.BUCKET_FILL);
-    }
-
-    @Override
-    public boolean isSource(FluidState state) {
+    public boolean isStill(FluidState state) {
         return false;
     }
 
     public static class Flowing extends NetherWaterFluid {
         @Override
-        protected void createFluidStateDefinition(StateDefinition.Builder<Fluid, FluidState> builder) {
-            super.createFluidStateDefinition(builder);
+        protected void appendProperties(StateManager.Builder<Fluid, FluidState> builder) {
+            super.appendProperties(builder);
             builder.add(LEVEL);
         }
 
         @Override
-        public int getAmount(FluidState state) {
-            return state.getValue(LEVEL);
+        public int getLevel(FluidState state) {
+            return state.get(LEVEL);
         }
 
         @Override
-        public boolean isSource(FluidState state) {
+        public boolean isStill(FluidState state) {
             return false;
         }
     }
 
     public static class Still extends NetherWaterFluid {
         @Override
-        public int getAmount(FluidState state) {
+        public int getLevel(FluidState state) {
             return 8;
         }
 
         @Override
-        public boolean isSource(FluidState state) {
+        public boolean isStill(FluidState state) {
             return true;
         }
     }

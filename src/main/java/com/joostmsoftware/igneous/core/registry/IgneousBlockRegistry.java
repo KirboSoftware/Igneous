@@ -3,9 +3,9 @@ package com.joostmsoftware.igneous.core.registry;
 import com.joostmsoftware.igneous.Igneous;
 import com.joostmsoftware.igneous.block.IgneousBlocks;
 import com.joostmsoftware.igneous.block.IgneousFluidBlocks;
-import net.minecraft.core.Registry;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.LiquidBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.FluidBlock;
+import net.minecraft.util.registry.Registry;
 
 public class IgneousBlockRegistry {
 
@@ -18,7 +18,7 @@ public class IgneousBlockRegistry {
         Registry.register(Registry.BLOCK, Igneous.ID(name), block);
     }
 
-    public static void registerFluidBlock(String name, LiquidBlock liquidBlock) {
+    public static void registerFluidBlock(String name, FluidBlock liquidBlock) {
         Registry.register(Registry.BLOCK, Igneous.ID(name), liquidBlock);
     }
 }

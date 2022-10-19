@@ -5,11 +5,11 @@ import com.joostmsoftware.igneous.item.IgneousBlockItems;
 import com.joostmsoftware.igneous.item.IgneousBucketItems;
 import com.joostmsoftware.igneous.item.IgneousItems;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.core.Registry;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.BucketItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.block.Block;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.BucketItem;
+import net.minecraft.item.Item;
+import net.minecraft.util.registry.Registry;
 
 public class IgneousItemRegistry {
 

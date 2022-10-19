@@ -2,8 +2,8 @@ package com.joostmsoftware.igneous.core.registry;
 
 import com.joostmsoftware.igneous.Igneous;
 import com.joostmsoftware.igneous.fluid.IgneousFluids;
-import net.minecraft.core.Registry;
-import net.minecraft.world.level.material.FlowingFluid;
+import net.minecraft.fluid.FlowableFluid;
+import net.minecraft.util.registry.Registry;
 
 public class IgneousFluidRegistry {
 
@@ -11,7 +11,7 @@ public class IgneousFluidRegistry {
         IgneousFluids.loadLiquidsInRegistry();
     }
 
-    public static void registerFluid(String name, FlowingFluid fluid) {
+    public static void registerFluid(String name, FlowableFluid fluid) {
         Registry.register(Registry.FLUID, Igneous.ID(name), fluid);
     }
 }
