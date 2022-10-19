@@ -26,6 +26,9 @@
     ],
     "terrablender": [
       "com.joostmsoftware.igneous.Igneous"
+    ],
+    "fabric-datagen": [
+      "com.joostmsoftware.igneous.util.IgneousDataGen"
     ]
   },
   "mixins": [

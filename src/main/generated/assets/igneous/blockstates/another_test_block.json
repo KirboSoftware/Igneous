@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "igneous:block/another_test_block"
+    }
+  }
+}
