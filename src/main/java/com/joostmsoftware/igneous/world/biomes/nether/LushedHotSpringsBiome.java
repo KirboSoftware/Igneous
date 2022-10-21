@@ -1,5 +1,6 @@
 package com.joostmsoftware.igneous.world.biomes.nether;
 
+import com.joostmsoftware.igneous.world.feature.IgneousPlacedFeatures;
 import net.minecraft.client.sound.MusicType;
 import net.minecraft.sound.BiomeAdditionsSound;
 import net.minecraft.sound.BiomeMoodSound;
@@ -20,7 +21,8 @@ public class LushedHotSpringsBiome {
                 .build();
         GenerationSettings.Builder builder = new GenerationSettings.Builder()
                 .carver(GenerationStep.Carver.AIR, ConfiguredCarvers.NETHER_CAVE)
-                .feature(GenerationStep.Feature.VEGETAL_DECORATION, MiscPlacedFeatures.SPRING_LAVA);
+                .feature(GenerationStep.Feature.VEGETAL_DECORATION, MiscPlacedFeatures.SPRING_LAVA)
+                .feature(GenerationStep.Feature.VEGETAL_DECORATION, IgneousPlacedFeatures.NETHER_FLOWERS);
         DefaultBiomeFeatures.addNetherMineables(builder);
 
         return new Biome.Builder()

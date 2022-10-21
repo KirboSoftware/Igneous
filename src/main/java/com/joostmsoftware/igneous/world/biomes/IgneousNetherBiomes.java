@@ -1,7 +1,9 @@
-package com.joostmsoftware.igneous.world.biomes.nether;
+package com.joostmsoftware.igneous.world.biomes;
 
 import com.joostmsoftware.igneous.Igneous;
 import com.joostmsoftware.igneous.util.registry.IgneousBiomeRegistry;
+import com.joostmsoftware.igneous.world.biomes.nether.HotSpringsBiome;
+import com.joostmsoftware.igneous.world.biomes.nether.LushedHotSpringsBiome;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.Biome;
