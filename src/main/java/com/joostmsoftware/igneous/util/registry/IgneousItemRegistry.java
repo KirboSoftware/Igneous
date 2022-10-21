@@ -14,6 +14,7 @@ import net.minecraft.util.registry.Registry;
 public class IgneousItemRegistry {
 
     public static void registerItems() {
+        Igneous.LOGGER.info("Registering all items");
         IgneousItems.loadItemsInRegistry();
         IgneousBlockItems.loadBlockItemsInRegistry();
         IgneousBucketItems.loadBucketsInRegistry();

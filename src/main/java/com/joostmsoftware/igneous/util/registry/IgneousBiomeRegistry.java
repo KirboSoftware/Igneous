@@ -1,5 +1,6 @@
 package com.joostmsoftware.igneous.util.registry;
 
+import com.joostmsoftware.igneous.Igneous;
 import com.joostmsoftware.igneous.world.biomes.nether.IgneousNetherBiomes;
 import net.fabricmc.fabric.api.biome.v1.NetherBiomes;
 import net.minecraft.util.registry.BuiltinRegistries;
@@ -10,6 +11,7 @@ import net.minecraft.world.biome.source.util.MultiNoiseUtil;
 public class IgneousBiomeRegistry {
 
     public static void registerBiomes() {
+        Igneous.LOGGER.info("Registering all biomes");
         IgneousNetherBiomes.loadNetherBiomes();
     }
 

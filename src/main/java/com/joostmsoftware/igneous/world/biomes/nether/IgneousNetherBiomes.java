@@ -16,7 +16,6 @@ public class IgneousNetherBiomes {
     }
 
     public static void loadNetherBiomes() {
-        Igneous.LOGGER.info("Registering Biomes");
         // do first
         IgneousBiomeRegistry.registerBiome(HOT_SPRINGS, HotSpringsBiome.create());
         IgneousBiomeRegistry.registerBiome(LUSH_HOT_SPRINGS, LushedHotSpringsBiome.create());

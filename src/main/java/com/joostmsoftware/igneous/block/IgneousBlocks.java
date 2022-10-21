@@ -1,6 +1,5 @@
 package com.joostmsoftware.igneous.block;
 
-import com.joostmsoftware.igneous.Igneous;
 import com.joostmsoftware.igneous.util.registry.IgneousBlockRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -22,7 +21,6 @@ public class IgneousBlocks {
     }
 
     public static void loadBlocksInRegistry() {
-        Igneous.LOGGER.info("Registering Blocks");
         BLOCKS.forEach(IgneousBlockRegistry::registerBlock);
     }
 

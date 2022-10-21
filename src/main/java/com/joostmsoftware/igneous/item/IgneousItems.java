@@ -20,7 +20,6 @@ public class IgneousItems {
     }
 
     public static void loadItemsInRegistry() {
-        Igneous.LOGGER.info("Registering Items");
         ITEMS.forEach(IgneousItemRegistry::registerItem);
     }
 }

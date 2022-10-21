@@ -1,5 +1,7 @@
 {
   "block.igneous.another_test_block": "Another Test Block",
+  "block.igneous.nether_flower": "Nether Flower",
+  "block.igneous.potted_nether_flower": "Potted Nether Flower",
   "block.igneous.test_block": "Test Block",
   "item.igneous.another_test": "Another Test",
   "item.igneous.nether_water_bucket": "Nether Water Bucket",

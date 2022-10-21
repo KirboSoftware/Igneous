@@ -8,6 +8,7 @@ import net.minecraft.util.registry.Registry;
 public class IgneousFluidRegistry {
 
     public static void registerFluids() {
+        Igneous.LOGGER.info("Registering all fluids");
         IgneousFluids.loadLiquidsInRegistry();
     }
 
