@@ -1,6 +1,6 @@
 package com.joostmsoftware.igneous.fluid;
 
-import com.joostmsoftware.igneous.util.registry.IgneousFluidRegistry;
+import com.joostmsoftware.jxlib.registry.fluid.FluidRegistry;
 import net.minecraft.fluid.FlowableFluid;
 
 import java.util.HashMap;
@@ -19,6 +19,6 @@ public class IgneousFluids {
     }
 
     public static void loadLiquidsInRegistry() {
-        LIQUIDS.forEach(IgneousFluidRegistry::registerFluid);
+        LIQUIDS.forEach(FluidRegistry::registerFluid);
     }
 }

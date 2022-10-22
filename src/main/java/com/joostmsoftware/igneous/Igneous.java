@@ -4,8 +4,10 @@ import com.joostmsoftware.igneous.util.registry.IgneousBiomeRegistry;
 import com.joostmsoftware.igneous.util.registry.IgneousBlockRegistry;
 import com.joostmsoftware.igneous.util.registry.IgneousFluidRegistry;
 import com.joostmsoftware.igneous.util.registry.IgneousItemRegistry;
+import com.joostmsoftware.igneous.world.feature.IgneousConfiguredFeatures;
 import com.joostmsoftware.igneous.world.regions.IgneousNetherRegion;
 import com.joostmsoftware.igneous.world.gen.surface.nether.IgneousNetherSurfaceRuleData;
+import com.joostmsoftware.jxlib.registry.JXLibRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
@@ -19,9 +21,6 @@ import terrablender.api.SurfaceRuleManager;
 import terrablender.api.TerraBlenderApi;
 
 public class Igneous implements ModInitializer, TerraBlenderApi {
-	// This logger is used to write text to the console and the log file.
-	// It is considered best practice to use your mod id as the logger's name.
-	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger("Igneous");
 
 	private static final String MOD_ID = "igneous";
@@ -34,11 +33,10 @@ public class Igneous implements ModInitializer, TerraBlenderApi {
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
-
-		// do first
+		JXLibRegistry.setModId(MOD_ID);
+		JXLibRegistry.setItemGroup(GROUP);
+		// Do world gen related stuff first
+		IgneousConfiguredFeatures.registerConfiguredFeatures();
 		IgneousBiomeRegistry.registerBiomes();
 
 		IgneousFluidRegistry.registerFluids();

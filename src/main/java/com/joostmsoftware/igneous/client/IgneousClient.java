@@ -1,5 +1,6 @@
 package com.joostmsoftware.igneous.client;
 
+import com.joostmsoftware.igneous.block.IgneousFlowerBlocks;
 import com.joostmsoftware.igneous.fluid.IgneousFluids;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -11,6 +12,9 @@ import net.minecraft.util.Identifier;
 public class IgneousClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
+        BlockRenderLayerMap.INSTANCE.putBlock(IgneousFlowerBlocks.NETHER_FLOWER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(IgneousFlowerBlocks.POTTED_NETHER_FLOWER, RenderLayer.getCutout());
+
         FluidRenderHandlerRegistry.INSTANCE.register(IgneousFluids.STILL_NETHER_WATER, IgneousFluids.FLOWING_NETHER_WATER,
                 new SimpleFluidRenderHandler(
                         new Identifier("minecraft:block/water_still"),
