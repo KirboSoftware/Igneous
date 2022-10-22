@@ -4,8 +4,10 @@ import com.joostmsoftware.igneous.util.registry.IgneousBiomeRegistry;
 import com.joostmsoftware.igneous.util.registry.IgneousBlockRegistry;
 import com.joostmsoftware.igneous.util.registry.IgneousFluidRegistry;
 import com.joostmsoftware.igneous.util.registry.IgneousItemRegistry;
+import com.joostmsoftware.igneous.world.feature.IgneousConfiguredFeatures;
 import com.joostmsoftware.igneous.world.regions.IgneousNetherRegion;
 import com.joostmsoftware.igneous.world.gen.surface.nether.IgneousNetherSurfaceRuleData;
+import com.joostmsoftware.jxlib.registry.JXLibRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
@@ -31,7 +33,10 @@ public class Igneous implements ModInitializer, TerraBlenderApi {
 
 	@Override
 	public void onInitialize() {
-		// do first
+		JXLibRegistry.setModId(MOD_ID);
+		JXLibRegistry.setItemGroup(GROUP);
+		// Do world gen related stuff first
+		IgneousConfiguredFeatures.registerConfiguredFeatures();
 		IgneousBiomeRegistry.registerBiomes();
 
 		IgneousFluidRegistry.registerFluids();

@@ -1,7 +1,7 @@
 package com.joostmsoftware.igneous.item;
 
 import com.joostmsoftware.igneous.Igneous;
-import com.joostmsoftware.igneous.util.registry.IgneousItemRegistry;
+import com.joostmsoftware.jxlib.registry.item.ItemRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 
@@ -20,6 +20,6 @@ public class IgneousItems {
     }
 
     public static void loadItemsInRegistry() {
-        ITEMS.forEach(IgneousItemRegistry::registerItem);
+        ITEMS.forEach(ItemRegistry::registerItem);
     }
 }

@@ -1,7 +1,7 @@
 package com.joostmsoftware.igneous.block;
 
-import com.joostmsoftware.igneous.util.registry.IgneousBlockRegistry;
 import com.joostmsoftware.igneous.fluid.IgneousFluids;
+import com.joostmsoftware.jxlib.registry.block.BlockRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FluidBlock;
@@ -19,6 +19,6 @@ public class IgneousFluidBlocks {
     }
 
     public static void loadLiquidBlocksInRegistry() {
-        LIQUID_BLOCKS.forEach(IgneousBlockRegistry::registerFluidBlock);
+        LIQUID_BLOCKS.forEach(BlockRegistry::registerFluidBlock);
     }
 }

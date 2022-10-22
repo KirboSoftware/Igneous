@@ -1,6 +1,6 @@
 package com.joostmsoftware.igneous.block;
 
-import com.joostmsoftware.igneous.util.registry.IgneousBlockRegistry;
+import com.joostmsoftware.jxlib.registry.block.BlockRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FlowerBlock;
@@ -23,8 +23,8 @@ public class IgneousFlowerBlocks {
     }
 
     public static void loadFlowerBlocksInRegistry() {
-        FLOWER_BLOCKS.forEach(IgneousBlockRegistry::registerFlowerBlock);
-        FLOWER_POT_BLOCKS.forEach(IgneousBlockRegistry::registerFlowerPotBlock);
+        FLOWER_BLOCKS.forEach(BlockRegistry::registerFlowerBlock);
+        FLOWER_POT_BLOCKS.forEach(BlockRegistry::registerFlowerPotBlock);
 
     }
 }

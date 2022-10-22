@@ -21,6 +21,16 @@ repositories {
 		name = 'MinecraftForge'
 		url = 'https://maven.minecraftforge.net/'
 	}
+
+	maven {
+		name = 'JoostMSoftware'
+		url = 'https://repsy.io/mvn/joostmsoftware/joostmsoftware'
+	}
+
+	maven {
+		name = 'TerraformersMC'
+		url = 'https://maven.terraformersmc.com'
+	}
 }
 
 dependencies {
@@ -34,6 +44,12 @@ dependencies {
 
 	// TerraBlender Fabric edition
 	modImplementation "com.github.glitchfiend:TerraBlender-fabric:${project.minecraft_version}-${project.terrablender_version}"
+
+	// JXLib
+	modImplementation include("com.joostmsoftware:JXLib:${project.minecraft_version}-${project.jxlib_version}")
+
+	// ModMenu
+	modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
 }
 
 loom {

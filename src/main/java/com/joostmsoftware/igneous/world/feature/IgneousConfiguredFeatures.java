@@ -10,7 +10,7 @@ public class IgneousConfiguredFeatures {
 
     public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> NETHER_FLOWERS = ConfiguredFeatures.register("flower_nether", Feature.FLOWER,
             ConfiguredFeatures.createRandomPatchFeatureConfig(
-                    32,
+                    64,
                     PlacedFeatures.createEntry(
                             Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(
                                     BlockStateProvider.of(IgneousFlowerBlocks.NETHER_FLOWER)
